@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iQuest Cook BooK</title>
+    <link rel="stylesheet" href="cookBook.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b777866db.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<header>
+    <h1 class="title"><i class="fas fa-utensils"></i>iQuest Cook Book</h1>
+    <div class="recipe-container">
+        <div class="new-recipe">
+            <p class="text"><span class="plus-sign">+</span>New recipe</p>
+        </div>
+        <div class="recipe-selector">
+            <form action="">
+                <label for="recipe-selector-label">
+                    <select name="recipe-selector" id="recipe-selector-label">
+                        <option value="recipe">Select a recipe...</option>
+                        <option value="pancakes">Pancakes</option>
+                        <option value="fried-potatoes">Fried potatoes</option>
+                        <option value="pork-steak">Pork steak</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+    </div>
+
+</header>
+<main>
+    <section class="about-section-container">
+        <div class="title">
+            <h1><i class="fas fa-info"></i>About</h1>
+        </div>
+        <div class="about-information">
+            <form action="">
+                <div class="recipe-title">
+                    <label for="recipe-title">Recipe title</label>
+                    <br><br>
+                    <input type="text" id="title" name="title" placeholder="Title" required></input>
+                </div>
+                <br><br><br>
+                <div class="description">
+                    <label for="recipe-description">Description</label>
+                    <br><br>
+                    <textarea row="50" cols="100" name="comment">About the recipe</textarea>
+                </div>
+                <div class="about-information-footer">
+                    <label for="recipe-portion">Portions</label>
+                    <select name="portion-selector" id="recipe-portion">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="more-than-five">More than 5</option>
+                    </select>
+                    <div class="time">
+                        <label for="time">Time(mins)</label>
+                        <select name="time-selector" id="time">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="more-than-five">More than 5</option>
+                        </select>
+                    </div>
+                    <div class="difficulty">
+                        <label for="difficulty">Difficulty</label>
+                        <select name="difficulty-selector" id="difficulty">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="more-than-five">More than 5</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="ingredients-section-container">
+        <div class="title-ingredients">
+            <h1><i class="fas fa-th-list"></i>Ingredients</h1>
+        </div>
+        <div class="ingredients-info">
+            <ul class="ingredients-list">
+                <li><i class="fas fa-angle-double-right"></i>300 g brown rice</li>
+                <li><i class="fas fa-angle-double-right"></i>2 pc red onions</li>
+                <li><i class="fas fa-angle-double-right"></i>1 pc fresh red chilli</li>
+                <li><i class="fas fa-angle-double-right"></i>25 g unsalted butter</li>
+                <li><i class="fas fa-angle-double-right"></i>6 pc large free-range eggs</li>
+            </ul>
+            <div class="ingredients-info-footer">
+                <form action="">
+                    <div class="quantity">
+                        <input type="number" id="number-id" name="quantity-input" placeholder="Qty." required></input>
+                    </div>
+                    <div class="unit">
+                        <select name="unit-selector" id="unit-selector-id">
+                            <option value="unit">Unit</option>
+                            <option value="kilograms">g</option>
+                            <option value="peace">pc</option>
+                            <option value="liters">L</option>
+                        </select>
+                    </div>
+                    <p class="bounding-word">of</p>
+                    <div class="ingredient">
+                        <input type="text" id="ingredient-id" name="ingredient-input" placeholder="Ingredient"
+                               required></input>
+                    </div>
+                    <button type="submit" value="Submit"
+                    <i class="fas fa-plus-square"></i>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="steps-section-container">
+        <div class="title-steps">
+            <h1><i class="fas fa-list-ol"></i>Steps</h1>
+        </div>
+        <div class="steps-info">
+            <ol class="steps-list">
+                <br><br><br>
+                <li>Cook the rice in a pan of boiling salted water according to the packet instructions,then drain and
+                    refresh under cold water,leaving it in the colander.
+                </li>
+                <br>
+                <li>At the same time poach the fish in a large pan of simmering salted water on a medium heat for 10
+                    minutes,then carefully remove with a slotted spoon.Turn the heat up under the poaching water and
+                    bring back to a good simmer.
+                </li>
+                <br>
+                <li>Meanwhile,peel the onions and finely slice with the red chilli(dessed if you like) and corriander
+                    stalks.Peel and finely chop the garlic and ginger,place it all in a large frying pan on a medium
+                    heat with 1 tablespoon of oil and the butter,and cook for 10 minutes ,or until soft but not
+                    coloured,stirring occasionally.
+                </li>
+            </ol>
+            <div class="description">
+                <label for="steps-description">Steps</label>
+                <br><br>
+                <textarea row="50" cols="100" name="comment">Step description</textarea>
+            </div>
+            <div class="step-adder">
+                <button type="submit" value="Submit"><p class="text"><i class="fas fa-plus-square"></i> Add step</p>
+                </button>
+            </div>
+        </div>
+        <div class="final-buttons">
+        <div class="cancel">
+                <p class="text"><i class="fas fa-trash-alt"></i>Cancel</p>
+            </div>
+            <div class="save">
+                <p class="text"><i class="far fa-save"></i>Save recipe</p>
+        </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
