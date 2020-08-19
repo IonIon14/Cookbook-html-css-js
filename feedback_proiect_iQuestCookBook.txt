@@ -1,0 +1,8 @@
+1)fara <br> uri(foloseste margin)
+2)input urile au un singur tag,nu si tag de inchidere
+3)padding la position relative,left right la absolute
+4)mai speicifice
+5)foloseste padding mai mult
+6)margin:unset(in body)
+7)fara position relative
+8)cand dau hover peste element,sa fie cat elementul!!!

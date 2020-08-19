@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>iQuest Cook BooK</title>
-    <link rel="stylesheet" href="cookBook.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9b777866db.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="cook-book.css">
+    <link rel="stylesheet" href="sweetalert2.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 <body>
 <header>
     <h1 class="title"><i class="fas fa-utensils"></i>iQuest Cook Book</h1>
     <div class="recipe-container">
-        <div class="new-recipe">
-            <p class="text"><span class="plus-sign">+</span>New recipe</p>
+        <div class="new-recipe new-recipe-toggle-button">
+            <i class="fas fa-plus"></i>Toggle new recipe
         </div>
         <div class="recipe-selector">
             <form action="">
@@ -31,137 +32,223 @@
 
 </header>
 <main>
-    <section class="about-section-container">
-        <div class="title">
-            <h1><i class="fas fa-info"></i>About</h1>
+    <section class="recipes-list-container">
+        <div class="recipes-list-header">
+            <div class="title">
+                <h1><i class="fas fa-info"></i>Available recipes</h1>
+            </div>
         </div>
-        <div class="about-information">
-            <form action="">
-                <div class="recipe-title">
-                    <label for="recipe-title">Recipe title</label>
-                    <br><br>
-                    <input type="text" id="title" name="title" placeholder="Title" required></input>
+        <div class="recipes-list-items">
+            <div class="recipe-item">
+                <h4>Recipe title #1</h4>
+                <p>About the recipe #1 bla bla.</p>
+                <div class="recipe-item-about-details">
+                    <span>1 Portion(s)</span>
+                    <span>5 min(s)</span>
+                    <span>2 Difficulty</span>
                 </div>
-                <br><br><br>
-                <div class="description">
-                    <label for="recipe-description">Description</label>
-                    <br><br>
-                    <textarea row="50" cols="100" name="comment">About the recipe</textarea>
+                <div class="recipe-item-ingredients">
+                    <ul>
+                        <li><i class="fas fa-angle-double-right"></i>300 g brown rice</li>
+                        <li><i class="fas fa-angle-double-right"></i>2 pc red onions</li>
+                        <li><i class="fas fa-angle-double-right"></i>1 pc fresh red chilli</li>
+                        <li><i class="fas fa-angle-double-right"></i>25 g unsalted butter</li>
+                        <li><i class="fas fa-angle-double-right"></i>6 pc large free-range eggs</li>
+                    </ul>
                 </div>
-                <div class="about-information-footer">
-                    <label for="recipe-portion">Portions</label>
-                    <select name="portion-selector" id="recipe-portion">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="more-than-five">More than 5</option>
-                    </select>
-                    <div class="time">
-                        <label for="time">Time(mins)</label>
-                        <select name="time-selector" id="time">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="more-than-five">More than 5</option>
-                        </select>
-                    </div>
-                    <div class="difficulty">
-                        <label for="difficulty">Difficulty</label>
-                        <select name="difficulty-selector" id="difficulty">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="more-than-five">More than 5</option>
-                        </select>
-                    </div>
+                <div class="recipe-item-steps">
+                    <ol>
+                        <li>Cook the rice in a pan of boiling salted water according to the packet instructions,then
+                            drain and
+                            refresh under cold water,leaving it in the colander.
+                        </li>
+                        <li>At the same time poach the fish in a large pan of simmering salted water on a medium heat
+                            for 10
+                            minutes,then carefully remove with a slotted spoon.Turn the heat up under the poaching water
+                            and
+                            bring back to a good simmer.
+                        </li>
+                        <li>Meanwhile,peel the onions and finely slice with the red chilli(dessed if you like) and
+                            corriander
+                            stalks.Peel and finely chop the garlic and ginger,place it all in a large frying pan on a
+                            medium
+                            heat with 1 tablespoon of oil and the butter,and cook for 10 minutes ,or until soft but not
+                            coloured,stirring occasionally.
+                        </li>
+                    </ol>
                 </div>
-            </form>
+            </div>
+            <div class="recipe-item">
+                <h4>Recipe title #2</h4>
+                <p>About the recipe #2</p>
+                <div class="recipe-item-about-details">
+                    <span>5 Portion(s)</span>
+                    <span>4 min(s)</span>
+                    <span>3 Difficulty</span>
+                </div>
+                <div class="recipe-item-ingredients">
+                    <ul>
+                        <li><i class="fas fa-angle-double-right"></i>300 g brown rice</li>
+                        <li><i class="fas fa-angle-double-right"></i>2 pc red onions</li>
+                        <li><i class="fas fa-angle-double-right"></i>1 pc fresh red chilli</li>
+                        <li><i class="fas fa-angle-double-right"></i>25 g unsalted butter</li>
+                        <li><i class="fas fa-angle-double-right"></i>6 pc large free-range eggs</li>
+                    </ul>
+                </div>
+                <div class="recipe-item-steps">
+                    <ol>
+                        <li>Cook the rice in a pan of boiling salted water according to the packet instructions,then
+                            drain and
+                            refresh under cold water,leaving it in the colander.
+                        </li>
+                        <li>At the same time poach the fish in a large pan of simmering salted water on a medium heat
+                            for 10
+                            minutes,then carefully remove with a slotted spoon.Turn the heat up under the poaching water
+                            and
+                            bring back to a good simmer.
+                        </li>
+                        <li>Meanwhile,peel the onions and finely slice with the red chilli(dessed if you like) and
+                            corriander
+                            stalks.Peel and finely chop the garlic and ginger,place it all in a large frying pan on a
+                            medium
+                            heat with 1 tablespoon of oil and the butter,and cook for 10 minutes ,or until soft but not
+                            coloured,stirring occasionally.
+                        </li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </section>
-
-    <section class="ingredients-section-container">
-        <div class="title-ingredients">
-            <h1><i class="fas fa-th-list"></i>Ingredients</h1>
-        </div>
-        <div class="ingredients-info">
-            <ul class="ingredients-list">
-                <li><i class="fas fa-angle-double-right"></i>300 g brown rice</li>
-                <li><i class="fas fa-angle-double-right"></i>2 pc red onions</li>
-                <li><i class="fas fa-angle-double-right"></i>1 pc fresh red chilli</li>
-                <li><i class="fas fa-angle-double-right"></i>25 g unsalted butter</li>
-                <li><i class="fas fa-angle-double-right"></i>6 pc large free-range eggs</li>
-            </ul>
-            <div class="ingredients-info-footer">
-                <form action="">
-                    <div class="quantity">
-                        <input type="number" id="number-id" name="quantity-input" placeholder="Qty." required></input>
+    <aside class="new-recipe-container">
+        <section class="about-section-container">
+            <div class="title">
+                <h1><i class="fas fa-info"></i>About</h1>
+            </div>
+            <div class="about-information">
+                <form action="" class="about-information-form">
+                    <div class="recipe-title">
+                        <label for="recipe-title">Recipe title</label>
+                        <input type="text" id="recipe-title" name="title" placeholder="Title" required/>
                     </div>
-                    <div class="unit">
-                        <select name="unit-selector" id="unit-selector-id">
-                            <option value="unit">Unit</option>
-                            <option value="kilograms">g</option>
-                            <option value="peace">pc</option>
-                            <option value="liters">L</option>
-                        </select>
+                    <div class="description">
+                        <label for="recipe-description">Description</label>
+                        <textarea rows="50" cols="129" name="comment" id="recipe-description"
+                                  placeholder="About the recipe"></textarea>
                     </div>
-                    <p class="bounding-word">of</p>
-                    <div class="ingredient">
-                        <input type="text" id="ingredient-id" name="ingredient-input" placeholder="Ingredient"
-                               required></input>
+                    <div class="about-information-footer">
+                        <div>
+                            <label for="recipe-portion">Portions</label>
+                            <select name="portion-selector" id="recipe-portion">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="more-than-five">More than 5</option>
+                            </select>
+                        </div>
+                        <div class="time">
+                            <label for="time">Time(mins)</label>
+                            <select name="time-selector" id="time">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="more-than-five">More than 5</option>
+                            </select>
+                        </div>
+                        <div class="difficulty">
+                            <label for="difficulty">Difficulty</label>
+                            <select name="difficulty-selector" id="difficulty">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="more-than-five">More than 5</option>
+                            </select>
+                        </div>
                     </div>
-                    <button type="submit" value="Submit"
-                    <i class="fas fa-plus-square"></i>
                 </form>
             </div>
-        </div>
-    </section>
-    <section class="steps-section-container">
-        <div class="title-steps">
-            <h1><i class="fas fa-list-ol"></i>Steps</h1>
-        </div>
-        <div class="steps-info">
-            <ol class="steps-list">
-                <br><br><br>
-                <li>Cook the rice in a pan of boiling salted water according to the packet instructions,then drain and
-                    refresh under cold water,leaving it in the colander.
-                </li>
-                <br>
-                <li>At the same time poach the fish in a large pan of simmering salted water on a medium heat for 10
-                    minutes,then carefully remove with a slotted spoon.Turn the heat up under the poaching water and
-                    bring back to a good simmer.
-                </li>
-                <br>
-                <li>Meanwhile,peel the onions and finely slice with the red chilli(dessed if you like) and corriander
-                    stalks.Peel and finely chop the garlic and ginger,place it all in a large frying pan on a medium
-                    heat with 1 tablespoon of oil and the butter,and cook for 10 minutes ,or until soft but not
-                    coloured,stirring occasionally.
-                </li>
-            </ol>
-            <div class="description">
-                <label for="steps-description">Steps</label>
-                <br><br>
-                <textarea row="50" cols="100" name="comment">Step description</textarea>
+        </section>
+        <section class="ingredients-section-container">
+            <div class="title-ingredients">
+                <h1><i class="fas fa-th-list"></i>Ingredients</h1>
             </div>
-            <div class="step-adder">
-                <button type="submit" value="Submit"><p class="text"><i class="fas fa-plus-square"></i> Add step</p>
-                </button>
+            <div class="ingredients-info">
+                <div class="ingredients-info-footer">
+                    <form action="">
+                        <div class="quantity">
+                            <input type="number" id="number-id" name="quantity-input" placeholder="Qty." required/>
+                        </div>
+                        <div class="unit">
+                            <select name="unit-selector" id="unit-selector-id">
+                                <option value="unit">Unit</option>
+                                <option value="g">g</option>
+                                <option value="pc">pc</option>
+                                <option value="L">L</option>
+                            </select>
+                        </div>
+                        <span class="bounding-word">of</span>
+                        <div class="ingredient">
+                            <input type="text" id="ingredient-id" name="ingredient-input" placeholder="Ingredient"
+                                   required/>
+                        </div>
+                        <div class="add-ingredients">
+                            <input type="button" value="Submit" id="add-ingredients">
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="final-buttons">
-        <div class="cancel">
-                <p class="text"><i class="fas fa-trash-alt"></i>Cancel</p>
+        </section>
+        <section class="steps-section-container">
+            <div class="title-steps">
+                <h1><i class="fas fa-list-ol"></i>Steps</h1>
             </div>
-            <div class="save">
-                <p class="text"><i class="far fa-save"></i>Save recipe</p>
-        </div>
-        </div>
-    </section>
+            <div class="steps-info">
+                <ol class="steps-list">
+                    <li>Cook the rice in a pan of boiling salted water according to the packet instructions,then drain
+                        and
+                        refresh under cold water,leaving it in the colander.
+                    </li>
+                    <li>At the same time poach the fish in a large pan of simmering salted water on a medium heat for 10
+                        minutes,then carefully remove with a slotted spoon.Turn the heat up under the poaching water and
+                        bring back to a good simmer.
+                    </li>
+                    <li>Meanwhile,peel the onions and finely slice with the red chilli(dessed if you like) and
+                        corriander
+                        stalks.Peel and finely chop the garlic and ginger,place it all in a large frying pan on a medium
+                        heat with 1 tablespoon of oil and the butter,and cook for 10 minutes ,or until soft but not
+                        coloured,stirring occasionally.
+                    </li>
+                </ol>
+                <div class="description">
+                    <label for="steps-description">Steps</label>
+                    <textarea rows="50" cols="129" name="comment" id="steps-description"
+                              placeholder="Steps description"></textarea>
+                </div>
+
+            </div>
+            <div class="final-buttons">
+                <button class="cancel-button"><i class="fas fa-trash-alt"></i>Cancel</button>
+                <button class="save-button"><i class="far fa-save"></i>Save recipe</button>
+            </div>
+        </section>
+    </aside>
 </main>
+
+<script>
+    const sidebar = document.querySelector('.new-recipe-container');
+
+    document.querySelector('.new-recipe-toggle-button').onclick = () => {
+        sidebar.classList.toggle('expanded');
+    };
+</script>
+<script src="functionality-cook-book.js"></script>
+<script src="sweetalert2.js"></script>
+<script src="sweetalert2.all.js"></script>
+<script src="sweetalert2.min.js"></script>
 </body>
 </html>
