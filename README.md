@@ -1,2 +1,2 @@
-# iQuest Cook Book
- website for cooking recipes
+Cook Book
+website for cooking recipes
